@@ -1,0 +1,36 @@
+
+
+  <div class="menu-item" *ngFor="let item of items | async">
+    <a [routerLink]="['/']">
+      <h1>{{item.name}}</h1>
+    </a>
+
+  
+    <div class="dropdown-content" id="myDropdown" *ngFor="let link of item.links" >
+        <a routerLink="{{link.value}}"  class="button fancy-button">
+          <i class="material-icons">{{link.icon}}</i>
+          {{link.name}}
+        </a>
+    </div>
+  
+    <!-- 
+            <button class="dropbtn" (click)="toggleDropdown()">Dropdown</button> 
+
+    <a routerLink="/cart" class="button fancy-button">
+      <i class="material-icons">{{item.checkout_icon}}</i>
+      Checkout
+    </a>
+    -->
+
+  
+
+  </div>
+
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

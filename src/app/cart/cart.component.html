@@ -1,0 +1,44 @@
+<h3>Cart: <span *ngIf="items.length == 0">EMPTY</span></h3>
+
+
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
+  <button class="remove-button" type="button" (click)="removeFromCart(item.id)">Remove</button>
+
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+  <div>
+    <label for="name"> Name </label>
+    <input id="name" type="text" formControlName="name" placeholder="Your Name" required/>
+  </div>
+
+  <div>
+    <label for="address"> Address </label>
+    <input id="address" type="text" formControlName="address" placeholder="e.g. Liberty street 4" required/>
+  </div>
+
+
+  
+  <div *ngIf="!isCartEmpty()">
+    <label for="shipping"> Shipping </label>
+    <div *ngFor="let shipping of shippingCosts | async">
+      <input name = "shipping" type="radio" (click)="setShipping(shipping.price)" required/> {{shipping.type}}
+
+    </div>
+
+      
+  </div>
+
+  <span><a routerLink="/shipping">Shipping Prices</a></span>
+
+
+  <div>
+    <h2>Total: {{this.getTotal() | currency}} </h2>
+  </div>
+
+
+  <button class="button" type="submit" [disabled]="isCartEmpty()">Purchase</button>
+</form>

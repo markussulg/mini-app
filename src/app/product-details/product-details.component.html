@@ -1,0 +1,17 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <div id="name">
+    <h3>{{ product.name }}</h3>
+    <i class="material-icons" *ngIf="isFavorite(product.id); else elseBlock">favorite</i>
+    <ng-template #elseBlock> <i class="material-icons">favorite_border</i></ng-template>
+  </div>
+
+
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+
+
+</div>
+

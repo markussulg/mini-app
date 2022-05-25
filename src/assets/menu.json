@@ -1,0 +1,29 @@
+[{
+    "name": "My e-Store",
+    "checkout_icon": "shopping_cart",
+    "feedback_icon": "feedback",
+    "links": [
+        {
+            "name":"Home",
+            "value":"/home",
+            "icon":"home"
+        },
+
+        {
+            "name":"Checkout",
+            "value":"/cart",
+            "icon":"shopping_cart"
+        },
+        {
+            "name":"Shipping cost",
+            "value":"/shipping",
+            "icon":"local_shipping"
+        },
+        {
+            "name":"Feedback",
+            "value":"/feedback",
+            "icon":"feedback"
+        }
+
+    ]
+}]

@@ -1,0 +1,29 @@
+<h1>Feedback</h1>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" ngNativeValidate >
+    <div>
+      <label for="name"> Name </label>
+      <input id="name" type="text" formControlName="name" required/>
+    </div>
+  
+    <div>
+      <label for="email"> Email </label>
+      <input id="email" type="text" formControlName="email" />
+    </div>
+
+    <div>
+        <label for="feedback"> Feedback </label>
+        <textarea name="" id="feedback" cols="25" rows="10" formControlName="message" required></textarea>
+    </div>
+  
+    <button class="button" type="submit"> Submit </button>
+
+
+</form>
+
+
+<button (click)="triggerFeedback()">View all feedback</button>
+<p class="all-feedback" *ngIf="showFeedback">{{getFeedback()}}</p>
+
+
+<button class="download-feedback" (click)="saveFeedback()">Download feedback</button>

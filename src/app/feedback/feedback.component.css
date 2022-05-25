@@ -1,0 +1,13 @@
+textarea{
+    resize:none;  
+}
+
+button {
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+}
+p {
+    overflow:scroll;
+    max-width: 500px;
+}
