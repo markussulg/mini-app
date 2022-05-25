@@ -1,4 +1,9 @@
 # Mini Angular Project
+## Deployment
+1. Download/clone repository
+2. Install node packages from cmd: 'npm install'
+3. Run and open in browser with: 'ng serve --open'
+
 ## Functionality
 Here is a brief overview of new functionalities.
 ### Menu
@@ -22,5 +27,5 @@ Here is a brief overview of new functionalities.
 * Requires name and feedback to submit feedback
 * Button to see all feedback (also previous feedback from assets/feedback.json)
 * Button to download all feedback (used to replace assets/feedback.json to store feedback)
-## Live Demo
+## Live Demo (may need 'npm install' and 'npm start')
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-qicqih)
